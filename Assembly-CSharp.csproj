@@ -71,6 +71,7 @@
     <Compile Include="Assets\Login.cs" />
     <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\Scriptable Objects\Card.cs" />
+    <Compile Include="Assets\Scriptable Objects\CardDB.cs" />
     <Compile Include="Assets\Scriptable Objects\DisplayCard.cs" />
     <Compile Include="Assets\Scriptable Objects\Effects.cs" />
     <Compile Include="Assets\Scriptable Objects\Inventory\Scripts\InvObject.cs" />

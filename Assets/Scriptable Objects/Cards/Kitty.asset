@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Kitty
   m_EditorClassIdentifier: 
   id: 0
-  cardName: 
-  Mcost: 0
-  atk: 0
-  def: 0
-  cardText: 
+  cardName: Kitty Knight
+  Mcost: 10
+  atk: 10
+  def: 10
+  cardText: Kitty knight
   effect: 0
+  art: {fileID: 21300000, guid: 8673d470810f2fc4faf1c44f07194b6c, type: 3}

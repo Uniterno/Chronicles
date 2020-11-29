@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: New Inventory
   m_EditorClassIdentifier: Assembly-CSharp::NewBehaviourScript
-  SlotList: []
+  SlotList:
+  - id: 0
+    card: {fileID: 11400000, guid: 9d62e610d00fac1489d6726a8f90d4b0, type: 2}
+    ammount: 0
+  - id: 1
+    card: {fileID: 11400000, guid: 8e8c3389a80b88d4ba52dc6c863c2406, type: 2}
+    ammount: 0
+  db: {fileID: 11400000, guid: 3adb09b990f90424497b77cae821f050, type: 2}
+  path: 
