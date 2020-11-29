@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5933671725cff6b4db535c2c20fa9c33, type: 3}
   m_Name: Goldfreed
   m_EditorClassIdentifier: 
+  prefab: {fileID: 7912483603391882629, guid: b041b454515651445b2cfefede36f1cc, type: 3}
   id: 1
   cardName: Goldfreed
   Mcost: 10
   atk: 5
   def: 4
-  cardText: 
+  cardText: Goldfred
   effect: 0
   art: {fileID: 21300000, guid: 8708a70b9d1dae94a80bd524add9ed58, type: 3}

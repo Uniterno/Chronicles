@@ -10,6 +10,8 @@ public class DisplayInventory : MonoBehaviour
     public int x_space_between;
     public int columns;
     public int  y_space;
+    public int x_start;
+    public int y_start;
 
     Dictionary<Slots, Card> toDisplay = new Dictionary<Slots, Card>();
 
@@ -28,14 +30,26 @@ public class DisplayInventory : MonoBehaviour
     {
         for (int i = 0; i < inventory.SlotList.Count; i++)
         {
-            var obj = Instantiate(inventory.SlotList[i].card.prefab, Vector3.zero, Quaternion.identity, transform);
+            var obj = Instantiate(inventory.SlotList[i].card.prefab, Vector2.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = getPos(i);
             obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.SlotList[i].ammount.ToString();
+            Debug.Log(i);
         }
     }
 
-    public Vector3 getPos(int i)
+    public void UdpdateDisplay()
     {
-        return new Vector3(x_space_between* (i % columns),(y_space*(i/columns)),0f);
+        for(int i =0; i < inventory.SlotList.Count; i++)
+        {
+            if (toDisplay.ContainsKey(inventory.SlotList[i]))
+            {
+                //toDisplay[inventory.SlotList[i]].GetComponentInChildren<TextMeshProUGUI>().text = inventory.SlotList[i].ammount;
+            }
+        }
+    }
+
+    public Vector2 getPos(int i)
+    {
+        return new Vector2(x_start + x_space_between* (i % columns),y_start + (y_space*(i/columns)));
     }
 }
