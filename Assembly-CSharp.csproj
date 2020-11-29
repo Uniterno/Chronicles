@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DisplayInventory.cs" />
     <Compile Include="Assets\GachaOptions.cs" />
     <Compile Include="Assets\Go.cs" />
     <Compile Include="Assets\InventoryOptions.cs" />

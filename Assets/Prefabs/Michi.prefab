@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2184584589599872205}
   - component: {fileID: 2718131805262066663}
   m_Layer: 5
-  m_Name: Card 2
+  m_Name: Michi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 787824d373d1dc14c9c33f5e0ff16b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 8e8c3389a80b88d4ba52dc6c863c2406, type: 2}
+  card: {fileID: 11400000, guid: 9d62e610d00fac1489d6726a8f90d4b0, type: 2}
   TName: {fileID: 2184584590686729527}
   TCost: {fileID: 2184584590693144298}
   Tatk: {fileID: 2184584590834706901}

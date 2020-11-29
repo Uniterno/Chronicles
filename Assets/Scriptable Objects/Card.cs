@@ -6,6 +6,7 @@ using UnityEngine;
 public class Card : ScriptableObject
 {
 
+    public GameObject prefab;
     public int id;
     public string cardName;
     public int Mcost;

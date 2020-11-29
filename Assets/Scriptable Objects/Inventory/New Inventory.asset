@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 6676be100e5a99444bfff0a4e2f690d4, type: 3}
   m_Name: New Inventory
-  m_EditorClassIdentifier: Assembly-CSharp::NewBehaviourScript
+  m_EditorClassIdentifier: 
   SlotList:
   - id: 0
     card: {fileID: 11400000, guid: 9d62e610d00fac1489d6726a8f90d4b0, type: 2}
-    ammount: 0
+    ammount: 1
   - id: 1
     card: {fileID: 11400000, guid: 8e8c3389a80b88d4ba52dc6c863c2406, type: 2}
-    ammount: 0
+    ammount: 1
   db: {fileID: 11400000, guid: 3adb09b990f90424497b77cae821f050, type: 2}
   path: 

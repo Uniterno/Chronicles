@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5933671725cff6b4db535c2c20fa9c33, type: 3}
   m_Name: Kitty
   m_EditorClassIdentifier: 
+  prefab: {fileID: 2184584589599872243, guid: 7d5fd36fe0a60fc48944f998264af428, type: 3}
   id: 0
   cardName: Kitty Knight
   Mcost: 10

@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using LitJson;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 [CreateAssetMenu(fileName ="New Inventory",menuName ="Inventory sys/InventorySlots")]
-public class NewBehaviourScript : ScriptableObject,ISerializationCallbackReceiver
+public class InvObject : ScriptableObject,ISerializationCallbackReceiver
 {
-    JsonData toload;
+    
     public List<Slots> SlotList = new List<Slots>();
     public CardDB db;
     public string path;

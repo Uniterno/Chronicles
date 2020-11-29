@@ -1051,6 +1051,7 @@ GameObject:
   - component: {fileID: 1892869501}
   - component: {fileID: 1892869503}
   - component: {fileID: 1892869502}
+  - component: {fileID: 1892869504}
   m_Layer: 5
   m_Name: Slotting
   m_TagString: Untagged
@@ -1116,3 +1117,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892869500}
   m_CullTransparentMesh: 0
+--- !u!114 &1892869504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892869500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b43b26f4f329e245b5fcd1952939797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: f2526d659d25f474495a93ff83bc5d5a, type: 2}
+  x_space_between: 15
+  columns: 6
+  y_space: 15
