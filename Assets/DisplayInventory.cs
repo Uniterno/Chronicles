@@ -9,7 +9,7 @@ public class DisplayInventory : MonoBehaviour
 
     public int x_space_between;
     public int columns;
-    public int  y_space;
+    public int y_space;
     public int x_start;
     public int y_start;
 
@@ -43,7 +43,8 @@ public class DisplayInventory : MonoBehaviour
         {
             if (toDisplay.ContainsKey(inventory.SlotList[i]))
             {
-                //toDisplay[inventory.SlotList[i]].GetComponentInChildren<TextMeshProUGUI>().text = inventory.SlotList[i].ammount;
+                //toDisplay[inventory.SlotList[i]].
+                    //GetComponentInChildren<TextMeshProUGUI>().text = inventory.SlotList[i].ammount;
             }
         }
     }

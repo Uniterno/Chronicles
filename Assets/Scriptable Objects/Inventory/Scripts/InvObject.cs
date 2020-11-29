@@ -8,6 +8,7 @@ public class InvObject : ScriptableObject,ISerializationCallbackReceiver
 {
     
     public List<Slots> SlotList = new List<Slots>();
+    public int id;
     public CardDB db;
     public string path;
     public void AddCard(Card _card, int _ammount)
