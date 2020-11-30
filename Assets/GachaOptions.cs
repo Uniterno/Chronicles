@@ -9,4 +9,9 @@ public class GachaOptions : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void openPackageButton()
+    {
+
+    }
 }
