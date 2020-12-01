@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 306362048}
   - component: {fileID: 306362047}
   m_Layer: 5
-  m_Name: openPackageButton
+  m_Name: OpenPackageButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -386,12 +386,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 444076757}
-        m_MethodName: 
+      - m_Target: {fileID: 444076759}
+        m_MethodName: OpenPackageButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -444,6 +444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 444076758}
   - component: {fileID: 444076759}
+  - component: {fileID: 444076760}
   m_Layer: 5
   m_Name: GachaOptions
   m_TagString: Untagged
@@ -484,6 +485,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f84316f58c66b549b70ef6535387218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &444076760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444076757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5e6cdca26deed49a6165d5f6971740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cards: {fileID: 11400000, guid: 3adb09b990f90424497b77cae821f050, type: 2}
 --- !u!1 &700547238
 GameObject:
   m_ObjectHideFlags: 0

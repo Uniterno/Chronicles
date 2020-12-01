@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName ="cards database",menuName ="Inventory sys/Card Database")]
-public class CardDB : ScriptableObject, ISerializationCallbackReceiver
+[CreateAssetMenu(fileName = "cards database", menuName = "Inventory sys/Card Database")]
+public class CardDB : ScriptableObject //ISerializationCallbackReceiver
 {
-    public Card[] cards;
+
+    public List<Card> allCards = new List<Card>();
+
     public Dictionary<Card, int> GetId = new Dictionary<Card, int>();
     public Dictionary<int, Card> GetCard = new Dictionary<int, Card>();
+
+    /* public Card[] cards;
 
     public void OnAfterDeserialize()
     {
@@ -24,5 +28,5 @@ public class CardDB : ScriptableObject, ISerializationCallbackReceiver
     {
 
     }
-
+    */
 }
