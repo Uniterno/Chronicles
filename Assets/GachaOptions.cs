@@ -7,7 +7,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class GachaOptions : MonoBehaviour
 {
-    // readonly DatabaseHandler cardDB;
 
     // Start is called before the first frame update
     public void BackButton()
@@ -18,7 +17,6 @@ public class GachaOptions : MonoBehaviour
     //Boton de abrir paquete
     public void OpenPackageButton()
     {
-        //Debug.Log(DatabaseHandler.GetById(1).cardName);
         List<int> Obtained = OpenPack();
 
         /* REMOVE - ONLY FOR DEBUGGING PURPOSES, REMOVE WHEN UPDATED */
@@ -28,7 +26,9 @@ public class GachaOptions : MonoBehaviour
         /* REMOVE TAG END - REMOVE TAG END - REMOVE TAG END - REMOVE */
 
         /* TODO HERE:
-           - Give cards to player (requires inventory fix) */
+           - Add cards to player's inventory
+           - Show obtained cards on Scene
+        */
     }
 
     public List<int> OpenPack()
@@ -41,13 +41,12 @@ public class GachaOptions : MonoBehaviour
 
     public List<int> ObtainRarities(uint pullAmount)
     {
-        List<int> obtained = new List<int>((int) pullAmount); // Fixed to length 3 because of pullAmount = 3, change if required
-        // For dynamic size, this must be changed to a List<int>
+        List<int> obtained = new List<int>((int) pullAmount);
         for (int i = 0; i < pullAmount; i++)
         {
             Card.Rarity rarity = GetRarity(Random.Range(1, 10001));
 
-            if (i == pullAmount - 1 && rarity < Card.Rarity.Rare) // Rara o superior garantizada
+            if (i == pullAmount - 1 && rarity < Card.Rarity.Rare) // Rare or above guaranteed
             {
                 rarity = Card.Rarity.Rare;
             }
@@ -96,25 +95,25 @@ public class GachaOptions : MonoBehaviour
             switch (DatabaseHandler.GetCards()[i].rarity)
             {
                 case Card.Rarity.Common:
-                    c.Add(DatabaseHandler.GetCards()[i].id);
+                    c.Add(DatabaseHandler.GetCards()[i].ID);
                     break;
                 case Card.Rarity.Uncommon:
-                    u.Add(DatabaseHandler.GetCards()[i].id);
+                    u.Add(DatabaseHandler.GetCards()[i].ID);
                     break;
                 case Card.Rarity.Rare:
-                    r.Add(DatabaseHandler.GetCards()[i].id);
+                    r.Add(DatabaseHandler.GetCards()[i].ID);
                     break;
                 case Card.Rarity.Epic:
-                    e.Add(DatabaseHandler.GetCards()[i].id);
+                    e.Add(DatabaseHandler.GetCards()[i].ID);
                     break;
                 case Card.Rarity.Legendary:
-                    l.Add(DatabaseHandler.GetCards()[i].id);
+                    l.Add(DatabaseHandler.GetCards()[i].ID);
                     break;
                 default:
                     break;
             }
         }
-        for(int i = 0; i < rarities.Count; i++)
+        for (int i = 0; i < rarities.Count; i++)
         {
             switch (rarities[i])
             {
@@ -140,3 +139,4 @@ public class GachaOptions : MonoBehaviour
         return rarities;
     }
 }
+

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Iisar_Queen
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  id: 6
+  ID: 3
   cardName: Iisar Queen
-  Mcost: 15
-  atk: 14
-  def: 14
+  cardType: 0
   rarity: 3
-  cardText: 
-  effect: 0
-  art: {fileID: 0}
+  manaCost: 0
+  ATK: 0
+  DEF: 0
+  effectID: 0
+  description: 

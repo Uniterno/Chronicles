@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Werewolf
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  id: 3
+  ID: 7
   cardName: Werewolf
-  Mcost: 8
-  atk: 13
-  def: 2
+  cardType: 0
   rarity: 1
-  cardText: 
-  effect: 0
-  art: {fileID: 0}
+  manaCost: 0
+  ATK: 0
+  DEF: 0
+  effectID: 0
+  description: 

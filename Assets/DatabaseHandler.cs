@@ -24,19 +24,7 @@ public class DatabaseHandler : MonoBehaviour
 
     public static Card GetById(int ID)
     {
-        /*foreach (Card _card in activeInstance.cards.allCards)
-        {
-            if (_card.id == ID)
-            {
-                return _card;
-            }
-            
-
-        }
-        return null;*/
-
-        return activeInstance.cards.allCards.FirstOrDefault(i => i.id == ID);
-
+        return activeInstance.cards.allCards.FirstOrDefault(i => i.ID == ID);
     }
 
 

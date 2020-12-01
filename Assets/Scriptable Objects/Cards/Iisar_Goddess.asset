@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Iisar_Goddess
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  id: 7
+  ID: 2
   cardName: 'Iisar Goddess: Satunia'
-  Mcost: 20
-  atk: 20
-  def: 20
+  cardType: 0
   rarity: 4
-  cardText: 
-  effect: 0
-  art: {fileID: 0}
+  manaCost: 0
+  ATK: 0
+  DEF: 0
+  effectID: 0
+  description: 
