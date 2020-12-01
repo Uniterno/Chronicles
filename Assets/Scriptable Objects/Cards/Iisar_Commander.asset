@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5933671725cff6b4db535c2c20fa9c33, type: 3}
-  m_Name: Card
+  m_Name: Iisar_Commander
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  id: 0
-  cardName: 
-  Mcost: 0
-  atk: 0
-  def: 0
-  rarity: 0
+  id: 5
+  cardName: Iisar Commander
+  Mcost: 10
+  atk: 14
+  def: 6
+  rarity: 2
   cardText: 
   effect: 0
   art: {fileID: 0}
