@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Kitty
   m_EditorClassIdentifier: 
   prefab: {fileID: 2184584589599872243, guid: 7d5fd36fe0a60fc48944f998264af428, type: 3}
-  id: 0
+  ID: 4
   cardName: Kitty Knight
-  Mcost: 10
-  atk: 10
-  def: 10
-  cardText: Kitty knight
-  effect: 0
-  art: {fileID: 21300000, guid: 8673d470810f2fc4faf1c44f07194b6c, type: 3}
+  cardType: 0
+  rarity: 0
+  manaCost: 0
+  ATK: 0
+  DEF: 0
+  effectID: 0
+  description: 
