@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Mermaid
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  id: 4
+  ID: 5
   cardName: Mermaid
-  Mcost: 11
-  atk: 3
-  def: 19
+  cardType: 0
   rarity: 1
-  cardText: 
-  effect: 0
-  art: {fileID: 0}
+  manaCost: 0
+  ATK: 0
+  DEF: 0
+  effectID: 0
+  description: 

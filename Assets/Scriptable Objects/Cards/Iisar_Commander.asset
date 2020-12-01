@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Iisar_Commander
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  id: 5
+  ID: 1
   cardName: Iisar Commander
-  Mcost: 10
-  atk: 14
-  def: 6
+  cardType: 0
   rarity: 2
-  cardText: 
-  effect: 0
-  art: {fileID: 0}
+  manaCost: 0
+  ATK: 0
+  DEF: 0
+  effectID: 0
+  description: 
