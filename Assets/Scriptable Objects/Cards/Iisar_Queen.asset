@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5933671725cff6b4db535c2c20fa9c33, type: 3}
   m_Name: Iisar_Queen
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 4393223292493329133, guid: f23777f581ec4c14f8a541acc4471ab3, type: 3}
   ID: 3
   cardName: Iisar Queen
   cardType: 0
