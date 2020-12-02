@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryObject : ScriptableObject
 {
     public List<inventorySlots> Container = new List<inventorySlots>();
+    public int id;
     public void AddItem(Card _item, int _ammount)
     {
         /* bool exists = false;
