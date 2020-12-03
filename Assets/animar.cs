@@ -9,11 +9,13 @@ public class animar : MonoBehaviour
     float waitTime = 0.0f;
     public Texture2D[] frames;
     public int fps = 10;
-    GameObject loadingScreen;
+    GameObject loadingScreen, slideText, screenAppear;
 
     void Start()
     {
         loadingScreen = GameObject.Find("background");
+        slideText = GameObject.Find("MessagesTextUI");
+        screenAppear = GameObject.Find("MessagesUi");
     }
     // Update is called once per frame
     void Update()
@@ -27,15 +29,10 @@ public class animar : MonoBehaviour
         }
         
     }
-
-    void MatchLoad()
-    {
-
-    }
-
     public void MatchStart()
     {
         loadingScreen.SetActive(false);
-
+        slideText.GetComponent<Animator>().enabled = true;
+        screenAppear.GetComponent<Animator>().enabled = true;
     }
 }
