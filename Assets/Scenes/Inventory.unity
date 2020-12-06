@@ -373,8 +373,8 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 50, y: 50}
-  m_Spacing: {x: 0, y: 0}
+  m_CellSize: {x: 70, y: 90}
+  m_Spacing: {x: 10, y: 10}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &373135360
@@ -390,6 +390,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 222c78ecf9d82764fa0306d1682179a2, type: 2}
+  inventoryPrefab: {fileID: 6171819311281310918, guid: d77fc4e000d9c9540a9455e2d2166b46,
+    type: 3}
 --- !u!114 &373135361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1393,7 +1395,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -209.85, y: 0}
+  m_AnchoredPosition: {x: -128, y: 0}
   m_SizeDelta: {x: 342.8991, y: 261}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1819088021
