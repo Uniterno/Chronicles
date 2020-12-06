@@ -14,9 +14,19 @@ public class InventoryObject : ScriptableObject
     public Inventory Container;
     public CardDB database;
     //public int id;
-    
+
     public void AddItem(Card _item, int _ammount)
     {
+        for (int i = 0; i < Container.Cards.Length; i++)
+        {
+
+
+            if (Container.Cards[i].ID == _item.ID)
+            {
+                Container.Cards[i].addAmount(_ammount);
+                return;
+            }
+        }
         EmptySlot(_item,_ammount);
         return;
         
@@ -36,6 +46,27 @@ public class InventoryObject : ScriptableObject
             }
         }
         return null;
+    }
+
+    public void move(inventorySlots origin,inventorySlots destination)
+    {
+        inventorySlots tmp = new inventorySlots(destination.ID,destination.item,destination.ammount);
+
+        destination.UpdateSlot(origin.ID, origin.item, origin.ammount);
+
+        origin.UpdateSlot(tmp.ID, tmp.item, tmp.ammount);
+
+    }
+
+    public void burn(Card _card)
+    {
+        for (int i = 0; i < Container.Cards.Length; i++)
+        {
+            if (Container.Cards[i].item == _card)
+            {
+                Container.Cards[i].UpdateSlot(-1, null, 0);
+            }
+        }
     }
 
     public void SaveData()
@@ -70,7 +101,7 @@ public class Inventory
 [System.Serializable]
 public class inventorySlots
 {
-    public int ID;
+    public int ID = -1;
     public Card item;
     public int ammount;
     public inventorySlots(int _id,Card _item, int _ammount)

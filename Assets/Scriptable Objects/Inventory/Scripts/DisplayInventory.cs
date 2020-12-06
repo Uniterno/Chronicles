@@ -8,6 +8,7 @@ using UnityEngine.Events;
 
 public class DisplayInventory : MonoBehaviour
 {
+    public MouseItem mouseItem = new MouseItem();
     public InventoryObject inventory;
    
     public Dictionary<GameObject, inventorySlots> ItemsDisplayed = new Dictionary<GameObject, inventorySlots>();
@@ -23,7 +24,13 @@ public class DisplayInventory : MonoBehaviour
 
     private void Update()
     {
-       // UpdateSlot();
+       UpdateSlot();
+
+        for (int i = 0; i < inventory.Container.Cards.Length; i++)
+        {
+            Debug.Log(inventory.Container.Cards[i].ID);
+        }
+        
     }
 
     public void UpdateSlot()
@@ -69,6 +76,11 @@ public class DisplayInventory : MonoBehaviour
             var obj = Instantiate(inventoryPrefab, Vector3.zero, Quaternion.identity, transform);
             //obj.GetComponent<RectTransform>
 
+            addEvent(obj, EventTriggerType.PointerExit, delegate { OnExit(obj); });
+            addEvent(obj, EventTriggerType.BeginDrag, delegate { OnDragStart(obj); });
+            addEvent(obj, EventTriggerType.EndDrag, delegate { OnDragEnd(obj); });
+            addEvent(obj, EventTriggerType.Drag, delegate { OnDrag(obj); });
+            
             ItemsDisplayed.Add(obj,inventory.Container.Cards[i]);
         }
 
@@ -86,32 +98,52 @@ public class DisplayInventory : MonoBehaviour
 
     public void OnEnter(GameObject obj)
     {
-
+        mouseItem.hoverobj = obj;
+        if (ItemsDisplayed.ContainsKey(obj))
+        {
+            mouseItem.hoverItem = ItemsDisplayed[obj];
+        }
     }
     public void OnExit(GameObject obj)
     {
-
+        mouseItem.hoverobj = null;       
+        mouseItem.hoverItem = null;
+        
     }
     public void OnDragStart(GameObject obj)
     {
         var mouseObject = new GameObject();
         var rt = mouseObject.AddComponent<RectTransform>();
-        rt.sizeDelta = new Vector2(50, 50);
+        rt.sizeDelta = new Vector2(70, 90);
         mouseObject.transform.SetParent(transform.parent);
-        /*
-        if (//GetItem[obj].ID >= 0)
+        if (ItemsDisplayed[obj].ID >= 0)
         {
             var img = mouseObject.AddComponent<Image>();
-            //img.sprite = inventory.database.GetCard[ItemsDisplayed[obj]].toDisplay;
-        }*/
+            img.sprite = inventory.database.GetCard[ItemsDisplayed[obj].ID].toDisplay;
+            img.raycastTarget = false;
+        }
+        mouseItem.obj = mouseObject;
+        mouseItem.card = ItemsDisplayed[obj];
     }
     public void OnDragEnd(GameObject obj)
     {
-
+        if (mouseItem.hoverobj)
+        {
+            inventory.move(ItemsDisplayed[obj], ItemsDisplayed[mouseItem.hoverobj]);
+        }
+        else
+        {
+            inventory.burn(ItemsDisplayed[obj].item);
+        }
+        Destroy(mouseItem.obj);
+        mouseItem.card = null;
     }
     public void OnDrag(GameObject obj)
     {
-
+        if (mouseItem.obj !=null)
+        {
+            mouseItem.obj.GetComponent<RectTransform>().position = Input.mousePosition;
+        }
     }
 
     public void OnApplicationQuit()
@@ -119,8 +151,12 @@ public class DisplayInventory : MonoBehaviour
         //inventory.Container.Cards = new inventorySlots[40];
     }
 
-    /*public Vector3 getPos(int i )
-    {
-        return new Vector3(x_start + X_between_item*(i%columns), y_start + ( y_space_between*(i/columns)),0f);
-    }*/
+}
+
+public class MouseItem
+{
+    public GameObject obj;
+    public inventorySlots card;
+    public inventorySlots hoverItem;
+    public GameObject hoverobj;
 }
