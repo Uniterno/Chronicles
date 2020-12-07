@@ -18,9 +18,6 @@ MonoBehaviour:
     - ID: 0
       item: {fileID: 11400000, guid: 8e8c3389a80b88d4ba52dc6c863c2406, type: 2}
       ammount: 1
-    - ID: 1
-      item: {fileID: 11400000, guid: 8e8c3389a80b88d4ba52dc6c863c2406, type: 2}
-      ammount: 1
     - ID: 2
       item: {fileID: 11400000, guid: c41f5f4f6d1d3ef42825842dc0977df8, type: 2}
       ammount: 1
@@ -30,16 +27,19 @@ MonoBehaviour:
     - ID: 4
       item: {fileID: 11400000, guid: 9d62e610d00fac1489d6726a8f90d4b0, type: 2}
       ammount: 1
-    - ID: 5
+    - ID: 4
       item: {fileID: 11400000, guid: 9d62e610d00fac1489d6726a8f90d4b0, type: 2}
       ammount: 1
-    - ID: 6
+    - ID: 5
+      item: {fileID: 11400000, guid: bd7f4f56b74438b4e8679da5a0957b7b, type: 2}
+      ammount: 1
+    - ID: 5
       item: {fileID: 11400000, guid: bd7f4f56b74438b4e8679da5a0957b7b, type: 2}
       ammount: 1
     - ID: 7
-      item: {fileID: 11400000, guid: c6e7c0163b5255b4fb6b82488e6597b1, type: 2}
+      item: {fileID: 11400000, guid: ed4b18402b36ffb46affbf37127c9f25, type: 2}
       ammount: 1
-    - ID: 8
+    - ID: 7
       item: {fileID: 11400000, guid: ed4b18402b36ffb46affbf37127c9f25, type: 2}
       ammount: 1
     - ID: -1

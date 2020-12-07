@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "New Inventory object", menuName = "Inventory/Inventory")]
-public class InventoryObject : ScriptableObject
+public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
 {
     public string path;
     public Inventory Container;
@@ -33,6 +33,19 @@ public class InventoryObject : ScriptableObject
         
         
         
+    }
+
+    public void OnAfterDeserialize()
+    {
+        for (int i = 0; i < Container.Cards.Length; i++)
+        {
+            Container.Cards[i].item = database.GetCard[Container.Cards[i].ID];
+        }
+    }
+
+    public void OnBeforeSerialize()
+    {
+
     }
 
     public inventorySlots EmptySlot(Card _card, int _ammount)
